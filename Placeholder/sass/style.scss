@@ -3,9 +3,12 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/images";
 html{
-  @include transition(background 1s);
+  //@include transition(background 1s);
   width: 100%;
   height: 100%;
+  background: rgb(34, 176, 77);
+  @include transition(background .25s);
+  color: #ccc;
 }
 body{
   position: absolute;
@@ -31,7 +34,7 @@ header{
   margin: auto;
   margin-top: 10%;
   @include background(linear-gradient(to bottom, #57C6FA, #0980FE));//#44F
-  color: #ccc;
+  //color: #ccc;
   @include box-shadow(0 0 10px 1px #ccc);
   @include transition(box-shadow 1s);
   h1{
