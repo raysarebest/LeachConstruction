@@ -119,6 +119,7 @@ setInterval(function(){
 function changeColorAndTime(){
 	var date = new Date();
 	document.getElementsByTagName('html')[0].style.background = "hsl("+prevColor[0]+", "+prevColor[1]+"%, "+prevColor[2]+"%)";
+	document.getElementById("content").style.background = "hsl("+prevColor[0]+", "+prevColor[1]+"%, "+prevColor[2]+"%)";
 	document.getElementById('date').innerHTML=days[date.getDay()]+", "+months[date.getMonth()]+" "+date.getDate()+", "+date.getFullYear()+" "+hour("number", date)+":"+minutes(date)+":"+seconds(date)+" "+gmt[hour("ap", date)];
 	var color = HSLToRGB(prevColor[0], prevColor[1], prevColor[2]);
 	for(var i = 0; i< 3; i++){
