@@ -3,12 +3,11 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/images";
 html{
-  //@include transition(background 1s);
   width: 100%;
   height: 100%;
   background: rgb(34, 176, 77);
   @include transition(background .08s);
-  color: #ccc;
+  color: #eee;
 }
 body{
   position: absolute;
@@ -30,7 +29,8 @@ header{
   font-family: "Rough Draft";
   font-weight: bold;
   display: block;
-  width: 800px;
+  width: 95%;
+  max-width: 800px;
   margin: auto;
   margin-top: 10%;
   @include background(linear-gradient(to bottom, #57C6FA, #0980FE));//#44F
@@ -40,14 +40,16 @@ header{
   h1{
     padding: 1% 5%;
     font-size: 4em;
+    text-align: center;
   }
 }
 #content{
   h2{
-    width: 1100px;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
     font-family: "Cubano";
+    text-size: 1.5em;
   }
 }
 #info{
@@ -68,5 +70,24 @@ footer{
   left: 2%;
   #author{
     font-family: monospace;
+  }
+}
+@media (max-width: 840px){
+  header{
+    h1{
+      font-size: 3em;
+    }
+  }
+}
+@media (max-width: 440px){
+  header{
+    h1{
+      font-size: 2em;
+    }
+  }
+  #content{
+    h2{
+      font-size: 1.25em;
+    }
   }
 }
