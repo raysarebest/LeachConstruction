@@ -132,4 +132,5 @@ function changeColorAndTime(){
 	else{
 		prevColor[0]++;
 	}
+	date = undefined;
 }
