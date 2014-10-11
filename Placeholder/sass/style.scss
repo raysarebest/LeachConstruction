@@ -2,59 +2,51 @@
 @import "compass/css3/transition";
 @import "compass/css3/box-shadow";
 @import "compass/css3/images";
-html{
-  width: 100%;
+html, body{
+  margin: 0;
+  padding: 0;
   height: 100%;
   background: rgb(34, 176, 77);
   @include transition(background .08s);
-  color: #eee;
-}
-body{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+  color: #fefefe;//#eee;
 }
 #wrapper{
-  width: 100%;
-  height: 100%;
-}
-p{
-  @include transition(color 1s);
-}
-h2{
-  @include transition(color 1s);
+  min-height: 95%;
+  position: relative;
 }
 header{
-  font-family: "Rough Draft";
-  font-weight: bold;
-  display: block;
-  width: 95%;
-  max-width: 800px;
-  margin: auto;
-  margin-top: 10%;
-  @include background(linear-gradient(to bottom, #57C6FA, #0980FE));//#44F
-  //color: #ccc;
-  @include box-shadow(0 0 10px 1px #ccc);
-  @include transition(box-shadow 1s);
-  h1{
-    padding: 1% 5%;
-    font-size: 4em;
-    text-align: center;
+  padding: 10px;
+  #blueprint{
+    display: block;
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 5%;
+    @include background(linear-gradient(to bottom, #57C6FA, #0980FE));
+    @include box-shadow(0 0 10px 1px #ccc);
+    h1{
+      padding: 1% 5%;
+      font-size: 4rem;
+      text-align: center;
+      font-family: "Rough Draft";
+      font-weight: bold;
+    }
   }
 }
 #content{
   h2{
-    width: 90%;
+    width: 92.5%;
     margin: 0 auto;
     text-align: center;
     font-family: "Cubano";
-    text-size: 1.5em;
+    text-size: 1.5rem;
+    padding-bottom: 3px;
   }
+  padding: 10px;
 }
 #info{
   div{
-    width: 50%;
+    width: 60%;
     margin-left: 23%;
     margin-top: 10%;
     text-align: center;
@@ -62,32 +54,44 @@ header{
       text-transform: uppercase;
       font-weight: bold;
     }
+    #rgb{
+      padding-bottom: 3px;
+      line-height: 105%;
+    }
   }
 }
 footer{
+  width: 98%;
+  height: 3px;
   position: absolute;
   bottom: 0;
   left: 2%;
+  padding: 0;
+  margin: 0;
   #author{
     font-family: monospace;
   }
 }
-@media (max-width: 840px){
+@media (max-width: 861px){
   header{
-    h1{
-      font-size: 3em;
+    #blueprint{
+      h1{
+        font-size: 3rem;
+      }
     }
   }
 }
 @media (max-width: 440px){
   header{
-    h1{
-      font-size: 2em;
+    #blueprint{
+      h1{
+        font-size: 2rem;
+      }
     }
   }
   #content{
     h2{
-      font-size: 1.25em;
+      font-size: 1.25rem;
     }
   }
 }
