@@ -120,7 +120,7 @@ function changeColorAndTime(){
 	var date = new Date();
 	var everything = document.getElementsByTagName("*");
 	for(var i = 0; i < everything.length; i++){
-		if(everything[i] != document.getElementById("blueprint")){
+		if(everything[i] != document.getElementById("blueprint") && everything[i] != document.getElementsByTagName("header")[0]){
 			everything[i].style.background = "hsl("+prevColor[0]+", "+prevColor[1]+"%, "+prevColor[2]+"%)";
 		}
 	}
