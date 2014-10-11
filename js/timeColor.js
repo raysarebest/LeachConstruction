@@ -120,7 +120,9 @@ function changeColorAndTime(){
 	var date = new Date();
 	var everything = document.getElementsByTagName("*");
 	for(var i = 0; i < everything.length; i++){
-		everything[i].style.background = "hsl("+prevColor[0]+", "+prevColor[1]+"%, "+prevColor[2]+"%)";
+		if(everything[i] != document.getElementById("blueprint")){
+			everything[i].style.background = "hsl("+prevColor[0]+", "+prevColor[1]+"%, "+prevColor[2]+"%)";
+		}
 	}
 	// document.getElementsByTagName('html')[0].style.background = "hsl("+prevColor[0]+", "+prevColor[1]+"%, "+prevColor[2]+"%)";
 	// document.getElementsByTagName('body')[0].style.background = "hsl("+prevColor[0]+", "+prevColor[1]+"%, "+prevColor[2]+"%)";
